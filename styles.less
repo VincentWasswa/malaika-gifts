@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@cta-color: #e36925;
+@sky-blue: #148bc4;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bs-black);
+
+    &:hover {
+        color: var(--bs-gray-700);
+    }
+}
+
+.gray-bg {
+    background: #ededed;
+}
+
+.block-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+header {
+    .top-bar {
+        background: #ececec;
+        padding: 12px 0;
+        font-size: 14px;
+
+        .top-bar-menu-navbar {
+            #topBarMenu {
+                .top-bar-menu {
+                    padding: 0;
+                    margin: 0;
+
+                    .top-bar-nav-item {
+                        display: inline;
+                        border-right: 1px solid;
+                        padding: 0 8px;
+
+                        &:last-child {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown {
+            .dropdown-toggle {
+                padding: 0 7px;
+                background: #fff;
+                border: 0;
+                border-radius: 0;
+                font-size: 14px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .navigation-wrapper {
+        .first-nav {
+            .navbar-brand {
+                .logo {
+                    width: 40%;
+                }
+            }
+
+            .user-menu {
+                @media (max-width:768px) {
+                    position: absolute;
+                    right: 75px;
+                    top: 21px;
+                }
+
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: inline;
+
+                    a {
+                        margin: 0 7px;
+
+                        i {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.categories-wrapper {
+    .block-title {
+        text-align: center;
+        position: relative;
+
+        .inner {
+            text-align: left;
+            display: inline-block;
+
+            h3 {
+                font-weight: 600;
+                margin: 0;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .caregories-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 25px;
+
+        @media (min-width: 50em) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (min-width: 30em) and (max-width: 50em) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 30em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .inner {
+            text-align: center;
+            padding: 23px;
+
+            a {
+                font-weight: 300;
+
+                span {
+                    margin-top: 21px;
+                    display: block;
+                }
+            }
+
+            img {
+                border-radius: 50%;
+            }
+
+        }
+    }
+}
+
+.featured-products {
+    .outer-wrapper {
+        @media (min-width:992px) {
+            padding: 80px;
+        }
+
+        .inner {
+            background: #fff;
+            text-align: center;
+            margin: 0 10px;
+
+            .prod-text {
+                padding: 25px;
+
+                .prod-price {
+                    font-weight: 700;
+                    color: @sky-blue;
+                    padding: 7px 0px;
+                }
+
+                .customer-reviews-stars {
+                    color: @cta-color;
+                }
+
+                .add-to-cart {
+                    margin: 12px 0 0;
+
+                    button {
+                        background: #e36925;
+                        color: #fff;
+                        border: none;
+                        padding: 5px 19px;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+.featured-categories{
+    .outer-wrapper {
+        padding: 80px;
+        .inner {
+            background: var(--bs-white);
+            .inner-text {
+                padding: 25px;
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                a {
+                    border: 1px solid;
+                    padding: 3px 32px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.blog-wrapper{
+    .outer-wrapper {
+        padding: 80px;
+        .inner {
+            background: var(--bs-white);
+            .inner-text {
+                padding: 25px;
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                a {
+                    border: 1px solid;
+                    padding: 3px 32px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.perks-icons{
+    .inner {
+        text-align: center;
+        background: #e0e0e0;
+        padding: 25px;
+        font-weight: 600;
+        font-size: 13px;
+        img {
+            width: 25px;
+            margin: -7px 5px 0 0;
+        }
+    }
+}
+
+#footer {
+	background: #2b292a;
+	color: #fff;
+
+    .footer-logo {
+        width: 30%;
+        filter: grayscale(40%);
+    }
+
+    .footer-menu-1 {
+        padding: 0;
+        margin-top: 22px;
+        li {
+            display: inline;
+            a {
+                color: #c4c4c4;
+                margin-right: 12px;
+                font-size: 22px;
+            }
+        }
+    }
+    .footer-menu {
+        padding: 0;
+        li {
+            display: block;
+            a {
+                color: #d0d0d0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .footer-menu-3 {
+        column-count: 2;
+    }
+}
